@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phạm Gia Khánh - Hồ Sơ Năng Lực Kỹ Thuật</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-subtle: #f9fafb;
+      --border: #e5e7eb;
+      --border-dark: #d1d5db;
+      --text-main: #111827;
+      --text-muted: #4b5563;
+      --text-light: #6b7280;
+      --primary: #1d4ed8;
+      --primary-hover: #1e40af;
+      --radius: 4px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      font-size: 14.5px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--primary-hover);
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      font-size: 13.5px;
+      font-weight: 500;
+      border-radius: var(--radius);
+      cursor: pointer;
+      border: 1px solid var(--border-dark);
+      background: #ffffff;
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: var(--bg-subtle);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--text-main);
+      color: #ffffff;
+      border-color: var(--text-main);
+    }
+
+    .btn-primary:hover {
+      background: #374151;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 40px 0 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-title {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .hero-info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .hero-info-list li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .hero-info-list li::before {
+      content: "-";
+      position: absolute;
+      left: 0;
+      color: var(--text-light);
+      font-weight: bold;
+    }
+
+    .hero-info-list strong {
+      color: var(--text-main);
+      font-weight: 600;
+      margin-right: 4px;
+    }
+
+    .hero-info-list a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .hero-info-list a:hover {
+      text-decoration: underline;
+    }
+
+    /* Sections */
+    section {
+      padding: 48px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .sub-title {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-light);
+      margin: 28px 0 16px;
+    }
+
+    .sub-title:first-of-type {
+      margin-top: 0;
+    }
+
+    /* Overview Grid */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .overview-item {
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg);
+    }
+
+    .overview-item h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .overview-item p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* Capabilities List */
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .cap-item {
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg);
+    }
+
+    .cap-item h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .plain-list {
+      list-style: none;
+    }
+
+    .plain-list li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 8px;
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .plain-list li::before {
+      content: "-";
+      position: absolute;
+      left: 0;
+      color: var(--text-light);
+      font-weight: bold;
+    }
+
+    /* Projects 3-Column Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .project-box {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-box-header {
+      margin-bottom: 10px;
+    }
+
+    .project-box-title {
+      font-size: 15.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .project-box-meta {
+      font-size: 12.5px;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+
+    .project-box-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .spec-block {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 10px 12px;
+      margin-bottom: 12px;
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
+
+    .spec-row {
+      margin-bottom: 4px;
+      color: var(--text-muted);
+    }
+
+    .spec-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .spec-row strong {
+      color: var(--text-main);
+    }
+
+    .project-box ul {
+      list-style: none;
+      margin-bottom: 14px;
+    }
+
+    .project-box ul li {
+      position: relative;
+      padding-left: 15px;
+      margin-bottom: 6px;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .project-box ul li::before {
+      content: "-";
+      position: absolute;
+      left: 0;
+      color: var(--text-light);
+    }
+
+    .project-link-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    /* Skills Descriptive Section */
+    .skills-detailed {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .skill-row {
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg);
+    }
+
+    .skill-row-title {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .skill-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .skill-list li {
+      position: relative;
+      padding-left: 16px;
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .skill-list li::before {
+      content: "-";
+      position: absolute;
+      left: 0;
+      color: var(--text-light);
+      font-weight: bold;
+    }
+
+    .skill-list strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      padding: 32px 0;
+      font-size: 13.5px;
+      color: var(--text-light);
+      background: var(--bg-subtle);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .overview-grid, .cap-grid, .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .overview-grid, .cap-grid, .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links { display: none; }
+      .hero-title { font-size: 24px; }
+    }
+
+    /* Print Styles: Định dạng văn bản tài liệu Docs thuần túy */
+    @media print {
+      @page {
+        margin: 15mm 18mm;
+        size: A4;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+        font-size: 11pt !important;
+        line-height: 1.5 !important;
+        color: #000000 !important;
+        background: #ffffff !important;
+      }
+
+      /* Ẩn các thành phần web & các tag cuối box */
+      .navbar, .btn, footer, .project-link-action, .project-box > div:last-child, .no-print {
+        display: none !important;
+      }
+
+      .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      /* Phần Header Hero */
+      .hero {
+        padding: 0 0 10pt 0 !important;
+        border: none !important;
+        border-bottom: none !important;
+        margin-bottom: 12pt !important;
+      }
+
+      .hero-title {
+        font-size: 16pt !important;
+        font-weight: 700 !important;
+        color: #000 !important;
+        margin-bottom: 6pt !important;
+      }
+
+      /* Phần thông tin cá nhân thành từng gạch đầu dòng ở dưới */
+      .hero-info-list {
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .hero-info-list li {
+        margin-bottom: 2.5pt !important;
+        position: relative !important;
+        padding-left: 14pt !important;
+        font-size: 10pt !important;
+        line-height: 1.4 !important;
+        color: #000 !important;
+      }
+
+      .hero-info-list li::before {
+        content: "-" !important;
+        position: absolute !important;
+        left: 0 !important;
+        color: #333 !important;
+        font-weight: bold !important;
+      }
+
+      .hero-info-list strong {
+        display: inline !important;
+        font-size: 10pt !important;
+        color: #000 !important;
+        font-weight: 700 !important;
+        margin-right: 4pt !important;
+      }
+
+      .hero-info-list a {
+        display: inline !important;
+        color: #000 !important;
+        text-decoration: none !important;
+        font-size: 10pt !important;
+      }
+
+      /* Sections & Headings - Không dòng kẻ */
+      section {
+        padding: 0 !important;
+        border: none !important;
+        margin-bottom: 14pt !important;
+        page-break-inside: auto !important;
+      }
+
+      .section-title {
+        font-size: 12pt !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.03em !important;
+        color: #000 !important;
+        border: none !important;
+        border-bottom: none !important;
+        padding-bottom: 0 !important;
+        margin-top: 14pt !important;
+        margin-bottom: 8pt !important;
+        page-break-after: avoid !important;
+      }
+
+      .sub-title {
+        font-size: 10.5pt !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        color: #333 !important;
+        border: none !important;
+        margin: 10pt 0 5pt !important;
+        page-break-after: avoid !important;
+      }
+
+      /* Overview & Capabilities: Dàn phẳng như văn bản tài liệu */
+      .overview-grid,
+      .cap-grid {
+        display: block !important;
+      }
+
+      .overview-item,
+      .cap-item {
+        border: none !important;
+        background: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin-bottom: 8pt !important;
+      }
+
+      .overview-item h3,
+      .cap-item h3 {
+        font-size: 10.5pt !important;
+        font-weight: 700 !important;
+        color: #000 !important;
+        margin-bottom: 2pt !important;
+        border: none !important;
+        padding: 0 !important;
+      }
+
+      .overview-item p {
+        font-size: 10pt !important;
+        color: #222 !important;
+        line-height: 1.45 !important;
+        margin-bottom: 3pt !important;
+      }
+
+      .plain-list li {
+        font-size: 10pt !important;
+        color: #222 !important;
+        margin-bottom: 2pt !important;
+        line-height: 1.4 !important;
+      }
+
+      /* Projects: Bỏ đóng khung, dàn văn bản phẳng */
+      .projects-grid {
+        display: block !important;
+      }
+
+      .project-box {
+        border: none !important;
+        background: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin-bottom: 12pt !important;
+        page-break-inside: avoid !important;
+      }
+
+      .project-box-header {
+        margin-bottom: 3pt !important;
+      }
+
+      .project-box-title {
+        font-size: 11pt !important;
+        font-weight: 700 !important;
+        color: #000 !important;
+        display: inline !important;
+      }
+
+      .project-box-meta {
+        font-size: 9.5pt !important;
+        color: #444 !important;
+        font-style: italic !important;
+        display: inline !important;
+        margin-left: 6pt !important;
+        margin-bottom: 0 !important;
+      }
+
+      .project-box-desc {
+        font-size: 10pt !important;
+        color: #222 !important;
+        margin-top: 2pt !important;
+        margin-bottom: 4pt !important;
+        line-height: 1.4 !important;
+      }
+
+      .spec-block {
+        background: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin: 2pt 0 4pt !important;
+        font-size: 9.5pt !important;
+      }
+
+      .spec-row {
+        margin-bottom: 1pt !important;
+        color: #333 !important;
+      }
+
+      .spec-row strong {
+        color: #000 !important;
+      }
+
+      .project-box ul {
+        margin-bottom: 3pt !important;
+      }
+
+      .project-box ul li {
+        font-size: 9.5pt !important;
+        color: #222 !important;
+        margin-bottom: 2pt !important;
+        line-height: 1.35 !important;
+      }
+
+      /* Skills Detailed: Dàn phẳng như văn bản docs */
+      .skills-detailed {
+        gap: 8pt !important;
+      }
+
+      .skill-row {
+        border: none !important;
+        background: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin-bottom: 7pt !important;
+        page-break-inside: avoid !important;
+      }
+
+      .skill-row-title {
+        font-size: 10.5pt !important;
+        font-weight: 700 !important;
+        color: #000 !important;
+        display: block !important;
+        margin-bottom: 2pt !important;
+      }
+
+      .skill-row-title::after {
+        content: none !important;
+      }
+
+      .skill-list {
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .skill-list li {
+        margin-bottom: 2pt !important;
+        position: relative !important;
+        padding-left: 14pt !important;
+        font-size: 9.5pt !important;
+        line-height: 1.4 !important;
+        color: #222 !important;
+      }
+
+      .skill-list li::before {
+        content: "-" !important;
+        position: absolute !important;
+        left: 0 !important;
+        color: #333 !important;
+        font-weight: bold !important;
+      }
+
+      .skill-list strong {
+        color: #000 !important;
+        font-weight: 700 !important;
+      }
+
+      /* Kỹ năng chuyên môn đẩy hẳn sang trang mới */
+      #ky-nang {
+        page-break-before: always !important;
+        break-before: page !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal Sticky Navbar -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <div class="brand">Phạm Gia Khánh</div>
+      <ul class="nav-links">
+        <li><a href="#tong-quan">Tổng quan</a></li>
+        <li><a href="#dinh-huong">Định hướng</a></li>
+        <li><a href="#du-an">Dự án kỹ thuật</a></li>
+        <li><a href="#ky-nang">Kỹ năng</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn" onclick="window.print()">In / Xuất PDF</button>
+        <a href="mailto:work.khanhphm@gmail.com" class="btn btn-primary">Liên hệ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <h1 class="hero-title">Phạm Gia Khánh - Hồ Sơ Năng Lực Kỹ Thuật</h1>
+      <ul class="hero-info-list">
+        <li><strong>Học vấn:</strong> Kỹ thuật Phần mềm - Đại học FPT Hà Nội</li>
+        <li><strong>Học bổng & Thành tích:</strong> Học bổng 70% toàn khóa; SV Xuất sắc SU25 (GPA 3.0 / 4.0)</li>
+        <li><strong>Email:</strong> <a href="mailto:work.khanhphm@gmail.com">work.khanhphm@gmail.com</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/kappyphm" target="_blank" rel="noopener noreferrer">github.com/kappyphm</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 1. TỔNG QUAN NĂNG LỰC -->
+  <section id="tong-quan">
+    <div class="container">
+      <h2 class="section-title">1. Tổng Quan Năng Lực</h2>
+      <div class="overview-grid">
+        <div class="overview-item">
+          <h3>Kỹ Thuật Phần Mềm & Phát Triển Hệ Thống</h3>
+          <p>
+            Nền tảng Kỹ thuật Phần mềm bài bản với tư duy hướng đối tượng OOP, các nguyên lý SOLID, mô hình hóa UML và soạn thảo tài liệu đặc tả yêu cầu SRS. Có kinh nghiệm phát triển dịch vụ backend, ứng dụng web tương tác và hệ thống tự động hóa xử lý dữ liệu; đồng thời có năng lực nghiên cứu, tiếp cận nhanh các hệ sinh thái phần mềm điều hành, giám sát thiết bị và giao thức truyền thông kỹ thuật.
+          </p>
+        </div>
+        <div class="overview-item">
+          <h3>Lập Trình Nhúng & Phần Cứng</h3>
+          <p>
+            Có năng lực tự thiết kế mạch KiCad 2 lớp trên vi điều khiển STM32, lập trình nhúng, tích hợp cảm biến và xử lý các giao thức truyền thông UART, iBus, SPI, I2C.
+          </p>
+        </div>
+        <div class="overview-item">
+          <h3>Thử Nghiệm & Vận Hành Thực Tế</h3>
+          <p>
+            Nắm chắc nguyên lý động lực học cơ bản, quy trình kiểm tra an toàn thiết bị. Có kỹ năng điều khiển thiết bị bay mô hình, trực tiếp tham gia lắp ráp, căn chỉnh và thử nghiệm thực địa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. ĐỊNH HƯỚNG CHUYÊN MÔN -->
+  <section id="dinh-huong">
+    <div class="container">
+      <h2 class="section-title">2. Định Hướng Chuyên Môn & Khả Năng Đóng Góp</h2>
+      <div class="cap-grid">
+        <div class="cap-item">
+          <h3>Kỹ Thuật Phần Mềm & Phát Triển Hệ Thống</h3>
+          <ul class="plain-list">
+            <li>Tham gia thiết kế và phát triển các phần mềm ứng dụng, dịch vụ backend quản lý, giao diện điều hành và hệ thống giám sát dữ liệu thời gian thực cho sản phẩm.</li>
+            <li>Xây dựng các module xử lý nghiệp vụ, quản lý luồng dữ liệu telemetry, lập kịch bản hoạt động và tích hợp hệ thống giữa thiết bị với trạm điều hành.</li>
+            <li>Nghiên cứu, ứng dụng và tùy biến các giải pháp mã nguồn mở, nền tảng phần mềm chuyên dụng và giao thức truyền thông phục vụ sản phẩm của công ty.</li>
+          </ul>
+        </div>
+        <div class="cap-item">
+          <h3>Lập Trình Nhúng & Tích Hợp Hệ Thống</h3>
+          <ul class="plain-list">
+            <li>Lập trình vi điều khiển, viết driver, xử lý luồng giao tiếp truyền nhận dữ liệu giữa mạch điều khiển trung tâm với các cảm biến ngoại vi và trạm điều khiển.</li>
+            <li>Hỗ trợ kiểm tra phần cứng, đo đạc mạch điện tử và nạp firmware trong quá trình R&D sản phẩm.</li>
+          </ul>
+        </div>
+        <div class="cap-item">
+          <h3>Thử Nghiệm Thực Địa & Đánh Giá Sản Phẩm</h3>
+          <ul class="plain-list">
+            <li>Tham gia khâu chuẩn bị, kiểm tra an toàn cơ - điện trước khi vận hành và trực tiếp điều khiển, vận hành thử nghiệm sản phẩm ngoài bãi thử.</li>
+            <li>Thu thập dữ liệu log sau mỗi lượt vận hành; kết hợp góc nhìn phần mềm với quan sát thực tế để phân tích log, đối soát hiện tượng lỗi và hỗ trợ đội ngũ kỹ thuật gỡ lỗi chính xác.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. DỰ ÁN KỸ THUẬT TIÊU BIỂU (BỐ CỤC 3 CỘT) -->
+  <section id="du-an">
+    <div class="container">
+      <h2 class="section-title">3. Dự Án Kỹ Thuật Tiêu Biểu</h2>
+
+      <!-- Hàng 1: Phần cứng & Hệ thống Nhúng (3 Cột) -->
+      <div class="sub-title">A. Phần Cứng & Hệ Thống Nhúng</div>
+      <div class="projects-grid">
+
+        <!-- SwanStab -->
+        <div class="project-box">
+          <div class="project-box-header">
+            <div class="project-box-title">SwanStab V1 Mod</div>
+            <div class="project-box-meta">Mạch Cân Bằng & Điều Khiển STM32</div>
+            <p class="project-box-desc">
+              Bo mạch điều khiển 2 lớp kích thước 30 x 40 mm dùng cho thiết bị bay cánh bằng hoặc mô hình điều khiển, tích hợp MCU STM32 và cảm biến chuyển động 6 trục.
+            </p>
+          </div>
+          <div class="spec-block">
+            <div class="spec-row"><strong>MCU & Cảm biến:</strong> STM32F103C8T6 ARM Cortex-M3, Bosch BMI160 I2C</div>
+            <div class="spec-row"><strong>Giao tiếp:</strong> 2 UART (Telemetry & ELRS/CRSF/SBUS/iBus)</div>
+            <div class="spec-row"><strong>Ngõ ra:</strong> 6 kênh PWM (2 Motor ESC + 4 Servo)</div>
+            <div class="spec-row"><strong>Nguồn & Debug:</strong> LDO AMS1117-3.3V, SWD, RST, BOOT0, LED</div>
+          </div>
+          <ul>
+            <li>Thiết kế Schematic và Layout bo mạch 2 lớp trên KiCad; tối ưu bố trí linh kiện thạch anh, IMU, tụ lọc nguồn chống nhiễu.</li>
+            <li>Xuất đầy đủ bộ file Gerber, BOM, CPL cho dây chuyền gia công SMT.</li>
+          </ul>
+          <div>
+            <a class="project-link-action" href="https://github.com/kappyphm/SwanStabilizer-FlightStabilizer" target="_blank">
+              Mã nguồn & Thiết kế &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- SimBoard -->
+        <div class="project-box">
+          <div class="project-box-header">
+            <div class="project-box-title">SimBoard 10CH Controller</div>
+            <div class="project-box-meta">Mạch Chuyển Tín Hiệu RC sang USB HID</div>
+            <p class="project-box-desc">
+              Thiết bị phần cứng nhận tín hiệu điều khiển từ bộ thu sóng RC và chuyển đổi sang chuẩn USB máy tính để phục vụ luyện tập trên các phần mềm mô phỏng.
+            </p>
+          </div>
+          <div class="spec-block">
+            <div class="spec-row"><strong>Vi điều khiển:</strong> STM32F103C8T6</div>
+            <div class="spec-row"><strong>Giao thức vào:</strong> iBus qua cổng nối tiếp UART</div>
+            <div class="spec-row"><strong>Ngõ ra máy tính:</strong> Chuẩn USB HID Joystick</div>
+            <div class="spec-row"><strong>Tần số quét:</strong> Tối ưu truyền nhận 100Hz</div>
+          </div>
+          <ul>
+            <li>Dùng bo STM32F103 đọc gói dữ liệu iBus qua UART, ánh xạ kênh xung 10-bit.</li>
+            <li>Tùy chỉnh HID descriptor và tối ưu tần số gửi dữ liệu 100Hz qua chuẩn USB HID.</li>
+          </ul>
+          <div>
+            <a class="project-link-action" href="https://github.com/kappyphm/stm32-ibus-usb-sim" target="_blank">
+              Mã nguồn & Thiết kế &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Mô hình Cánh bằng -->
+        <div class="project-box">
+          <div class="project-box-header">
+            <div class="project-box-title">Chế Tạo Mô Hình Cánh Bằng</div>
+            <div class="project-box-meta no-print">Thử Nghiệm Vận Hành Thực Địa</div>
+            <p class="project-box-desc">
+              Tự gia công, chế tạo hoàn chỉnh mô hình máy bay cánh bằng động lực điện và trực tiếp điều khiển bay thử nghiệm thành công.
+            </p>
+          </div>
+          <div class="spec-block">
+            <div class="spec-row"><strong>Khung vỏ:</strong> Vật liệu xốp gia công định hình</div>
+            <div class="spec-row"><strong>Cơ khí:</strong> Dựng hình 3D gá động cơ trên Fusion 360, in 3D FDM</div>
+            <div class="spec-row"><strong>Động lực:</strong> Động cơ Brushless, ESC, servo, pin LiPo</div>
+            <div class="spec-row"><strong>Cân bằng:</strong> Căn chỉnh trọng tâm khí động học</div>
+          </div>
+          <ul>
+            <li>Dựng hình 3D chi tiết gá động cơ và bản lề trên Fusion 360 để in 3D; hoàn thiện hệ thống động lực điện.</li>
+            <li>Căn chỉnh trọng tâm thiết bị, nắm vững nguyên lý lực nâng và kiểm soát góc đón.</li>
+            <li>Trực tiếp điều khiển bay thử nghiệm thành công ngoài trời; hỗ trợ kỹ thuật tại Lữ đoàn 45.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Hàng 2: Phần mềm & Hệ thống Thông tin (3 Cột) -->
+      <div class="sub-title">B. Phần Mềm & Hệ Thống Thông Tin</div>
+      <div class="projects-grid">
+
+        <!-- FPT Software -->
+        <div class="project-box">
+          <div class="project-box-header">
+            <div class="project-box-title">FPT Software</div>
+            <div class="project-box-meta">Thực tập sinh Fullstack Java (04/2026 - 08/2026)</div>
+            <p class="project-box-desc">
+              Dự án chuyển đổi hệ thống quản lý nội bộ từ ứng dụng desktop Java Swing sang nền tảng Web trên kiến trúc Spring Boot.
+            </p>
+          </div>
+          <div class="spec-block">
+            <div class="spec-row"><strong>Công nghệ backend:</strong> Java, Spring Boot</div>
+            <div class="spec-row"><strong>Giao diện:</strong> JSP, CSS, JavaScript, HTML</div>
+            <div class="spec-row"><strong>Quy trình:</strong> Agile/Scrum, quản lý mã nguồn qua SVN</div>
+            <div class="spec-row"><strong>Tài liệu kỹ thuật:</strong> Breakspecs, thiết kế Figma</div>
+          </div>
+          <ul>
+            <li>Đọc hiểu mã nguồn Swing cũ để bóc tách luồng nghiệp vụ và chuyển đổi logic sang các controller, service Spring Boot.</li>
+            <li>Xây dựng giao diện web động bám sát tài liệu đặc tả breakspecs và Figma.</li>
+            <li>Tham gia vận hành theo mô hình Scrum, nhận ticket, gỡ lỗi và được PM khen thưởng cá nhân.</li>
+          </ul>
+          <div>
+            <span style="font-size: 13px; color: var(--text-light);">Dự án doanh nghiệp</span>
+          </div>
+        </div>
+
+        <!-- FinPulse -->
+        <div class="project-box">
+          <div class="project-box-header">
+            <div class="project-box-title">FinPulse</div>
+            <div class="project-box-meta">Hệ Thống Tự Động Hóa Dữ Liệu</div>
+            <p class="project-box-desc">
+              Dịch vụ backend tự động hóa thu thập, phân tích và phân phối bản tin dữ liệu theo thời gian thực qua kênh bot Telegram.
+            </p>
+          </div>
+          <div class="spec-block">
+            <div class="spec-row"><strong>Nền tảng:</strong> Node.js, TypeScript, framework GrammY</div>
+            <div class="spec-row"><strong>Cơ sở dữ liệu:</strong> PostgreSQL</div>
+            <div class="spec-row"><strong>Thu thập dữ liệu:</strong> Module Python (vnstock)</div>
+            <div class="spec-row"><strong>Xử lý AI:</strong> Tích hợp API Gemini làm sạch và tóm tắt</div>
+          </div>
+          <ul>
+            <li>Thiết kế luồng dữ liệu tự động: tích hợp module Python kéo dữ liệu định kỳ, kết nối API Gemini xử lý nội dung.</li>
+            <li>Xây dựng backend Node.js/TypeScript xử lý logic điều phối tin nhắn qua GrammY.</li>
+            <li>Thiết kế cơ sở dữ liệu PostgreSQL lưu trữ lịch sử bản tin và cấu hình người dùng.</li>
+          </ul>
+          <div>
+            <span style="font-size: 13px; color: var(--text-light);">Hệ thống tự động hóa</span>
+          </div>
+        </div>
+
+        <!-- Quantik Dashboard -->
+        <div class="project-box">
+          <div class="project-box-header">
+            <div class="project-box-title">Quantik Dashboard</div>
+            <div class="project-box-meta">Web Giám Sát & Trực Quan Hóa Dữ Liệu</div>
+            <p class="project-box-desc">
+              Ứng dụng web hiển thị trực quan các mô hình và chỉ số phân tích dữ liệu định lượng, phát triển phối hợp cùng nhóm sinh viên nghiên cứu NEU.
+            </p>
+          </div>
+          <div class="spec-block">
+            <div class="spec-row"><strong>Giao diện:</strong> React.js, Tailwind CSS</div>
+            <div class="spec-row"><strong>Giao tiếp:</strong> RESTful API backend Python</div>
+            <div class="spec-row"><strong>Trực quan hóa:</strong> Hệ thống biểu đồ xu hướng nhiều chiều</div>
+            <div class="spec-row"><strong>Đặc tính:</strong> Responsive, cập nhật thời gian thực</div>
+          </div>
+          <ul>
+            <li>Xây dựng giao diện web dashboard tương tác với hệ thống bảng số liệu và biểu đồ xu hướng.</li>
+            <li>Tích hợp và xử lý dữ liệu bất đồng bộ từ các endpoint RESTful API backend.</li>
+            <li>Tối ưu hiển thị responsive, hoàn thiện tính năng lọc dữ liệu và bàn giao sử dụng thực tế.</li>
+          </ul>
+          <div>
+            <span style="font-size: 13px; color: var(--text-light);">Dự án nghiên cứu</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. KỸ NĂNG CHUYÊN MÔN -->
+  <section id="ky-nang">
+    <div class="container">
+      <h2 class="section-title">4. Kỹ Năng Chuyên Môn</h2>
+      <div class="skills-detailed">
+
+        <div class="skill-row">
+          <div class="skill-row-title">Phần Mềm & Hệ Thống Điều Khiển</div>
+          <ul class="skill-list">
+            <li>Nắm vững kiến trúc ArduPilot và giao thức truyền thông MAVLink.</li>
+            <li>Sử dụng thành thạo Mission Planner và QGroundControl trong cấu hình, giám sát và phân tích dữ liệu bay.</li>
+            <li>Hiểu rõ và tuân thủ quy trình kiểm tra an toàn thiết bị trước khi vận hành.</li>
+          </ul>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-row-title">Kỹ Thuật Phần Mềm & Thiết Kế Hệ Thống</div>
+          <ul class="skill-list">
+            <li>Nắm chắc tư duy hướng đối tượng OOP và các nguyên lý SOLID.</li>
+            <li>Triển khai thực tế các mẫu thiết kế (Design Patterns): Strategy, Singleton, Factory, MVC.</li>
+            <li>Nắm vững cấu trúc dữ liệu và giải thuật cốt lõi trong tối ưu hóa hiệu năng phần mềm.</li>
+            <li>Mô hình hóa hệ thống qua biểu đồ UML và soạn thảo tài liệu đặc tả yêu cầu SRS bài bản.</li>
+          </ul>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-row-title">Ngôn Ngữ Lập Trình</div>
+          <ul class="skill-list">
+            <li><strong>C / C++:</strong> Lập trình vi điều khiển, quản lý bộ nhớ, xử lý ngắt và giao tiếp ngoại vi.</li>
+            <li><strong>Java (Spring Boot):</strong> Phát triển backend dịch vụ, xây dựng RESTful API và hệ thống quản lý.</li>
+            <li><strong>TypeScript / JavaScript:</strong> Xây dựng giao diện web tương tác, dashboard giám sát và kịch bản tự động hóa.</li>
+            <li><strong>SQL:</strong> Thiết kế mô hình dữ liệu quan hệ và tối ưu hóa câu truy vấn.</li>
+          </ul>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-row-title">Thiết Kế Phần Cứng & Hệ Thống Nhúng</div>
+          <ul class="skill-list">
+            <li>Thiết kế Schematic và Layout bo mạch in PCB 2 lớp trên phần mềm KiCad.</li>
+            <li>Lập trình vi điều khiển STM32 trên môi trường PlatformIO và Arduino.</li>
+            <li>Nắm vững nguyên lý thiết kế mạch nguồn LDO và nguồn giảm áp xung Buck.</li>
+            <li>Cấu hình và làm chủ các chuẩn giao tiếp: UART, I2C, SPI, SWD.</li>
+            <li>Kỹ thuật gia công phần cứng: Thành thạo hàn khò linh kiện dán SMD và linh kiện chân cắm THT.</li>
+          </ul>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-row-title">Cơ Khí & Thử Nghiệm Thực Địa</div>
+          <ul class="skill-list">
+            <li>Dựng hình 3D trên Fusion 360 và in 3D FDM các chi tiết gá lắp cơ khí.</li>
+            <li>Gia công, chế tác và căn chỉnh khí động học cho mô hình bay xốp.</li>
+            <li>Nắm vững nguyên lý động lực học cơ bản và trực tiếp điều khiển thiết bị bay thực tế ngoài bãi thử.</li>
+            <li>Thu thập và phân tích dữ liệu log telemetry để hỗ trợ khoanh vùng và gỡ lỗi hệ thống.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="lien-he">
+    <div class="container footer-inner">
+      <div>
+        <strong>Phạm Gia Khánh</strong> - Hồ Sơ Năng Lực Kỹ Thuật<br>
+        Sinh viên năm 4 ngành Kỹ thuật Phần mềm, Đại học FPT Hà Nội
+      </div>
+      <div>
+        Email: <a href="mailto:work.khanhphm@gmail.com">work.khanhphm@gmail.com</a> | 
+        GitHub: <a href="https://github.com/kappyphm" target="_blank">github.com/kappyphm</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
